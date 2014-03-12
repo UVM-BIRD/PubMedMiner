@@ -1,7 +1,10 @@
 # Author: Yucan Zhang
-# Email: yucanzhang@gmail.com
 # CS Mater Project
 # 2013
+
+# NOTICE: Specify the default email address to make use of the NCBI E-Utilities
+# repalce xxxx@xxx.xxx with a working email address at line #109
+
 
 require 'rubygems'
 
@@ -102,7 +105,8 @@ def search(dir)
   searchIsSuccessful = false
   require 'bio'
   
-  Bio::NCBI.default_email = 'yucanzhang@gmail.com'
+  # fill in a working email address
+  Bio::NCBI.default_email = 'xxxxx@xxx.xxx'
   
   # acquire key words from user for the search
   def acquireKey
