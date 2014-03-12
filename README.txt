@@ -1,6 +1,6 @@
 PubMedMiner: Mining and Visualizing MeSH-based Associations in PubMed
 2014-03-09
-Author: Yucan Zhang (yucanzhang@gmail.com)
+Author: Yucan Zhang
 
 ******************************Project Description************************************
 Project Description:
@@ -53,6 +53,9 @@ Two utilities are used in this program:
  * efetch: with the list of UIDs, retrieve data records in specified format from the database
 See more information about different utilities at:
 http://www.ncbi.nlm.nih.gov/books/NBK25500/
+
+**** In order to correctly use the NCBI E-Utilities, a default email address is required in the script.
+**** At line #109 in the PubMedMiner.rb script file, replace xxxx@xxx.xxx with a working email address.
 
  - R
 Language and environment for statistical computing and graphics.
@@ -403,20 +406,20 @@ Creates a number of types of plots based on mined rules using R with "arulesViz"
 
 Questions will be asked are as follows:
 
-•	Enter support value (decimal between 0.0 and 1.0): 
-•	Enter confidence value (decimal between 0.0 and 1.0):
-•	Enter the maximum length for rules (integer >= 2):
+ï¿½	Enter support value (decimal between 0.0 and 1.0): 
+ï¿½	Enter confidence value (decimal between 0.0 and 1.0):
+ï¿½	Enter the maximum length for rules (integer >= 2):
 These three parameters are required for mining rules using apriori algorithm. 
 They determine the number of rules we can get at the end.
 The "scatter_plot.jpg", "matrix_plot.jpg" will be created without more questions.
 
-•	Enter the k value for plotting grouped matrix (integer > 0): 
+ï¿½	Enter the k value for plotting grouped matrix (integer > 0): 
 This question is for grouped matrix.
 k-value represents the number of groups will be plotted on the LHS. 
 The default value in arulesViz is 10.
 The "grouped_matrix.jpg" will be created after this input.
 
-•	Enter the number of rules for plotting graphs (integer > 0):
+ï¿½	Enter the number of rules for plotting graphs (integer > 0):
 This question is for graph-based visualization. 
 "arulesViz" can only handle a small set of rules with this function. 
 Although it is not clear what the maximum number of rules can be graphed, based on the clarity of the graph, somewhere below 50 might be a good guess. 
@@ -427,7 +430,7 @@ To handle large set of rules, "graph_large_set.graphml" is created and can be vi
 The default number is 1000. It can be changed in the source code. It can be implemented in the future in such way that the user can set this number.
 
 So far, all plots are created using inputs from the user. One more question will be asked:
-•	Mine rules with different support/confidence settings? (y/n)
+ï¿½	Mine rules with different support/confidence settings? (y/n)
 If "y", the mineRules function will run again. All the .pdf files will be rewritten with new inputs.
 If "n", the program will stop.
 
